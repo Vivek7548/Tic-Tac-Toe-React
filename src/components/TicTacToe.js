@@ -75,8 +75,12 @@ export default function TicTacToe() {
           {rendorSquare(8)}
         </div>
       </div>
-      {winner && <div>{winner} is Winner of this Game. </div>}
-      <button onClick={handleReset}>Reset</button>
+      {winner && (
+        <div className="winner-message">{winner} is Winner of this Game. </div>
+      )}
+      <button onClick={handleReset} className="reset-button">
+        Reset
+      </button>
     </>
   );
 }
